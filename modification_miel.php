@@ -10,7 +10,6 @@ if($_SESSION['administrateur'] !== 1)
 		$_POST['miel'], $_FILES['image_miel_modification']))
 	{
 		
-
 		$miel = $_POST['miel'];
 
 		$contenu_modification = $_POST['contenu_modification'];
@@ -18,13 +17,18 @@ if($_SESSION['administrateur'] !== 1)
 		$image_miel_modification = $_FILES['image_miel_modification']['name'];
         $miel_modification = $_POST['miel_modification'];
 
-        $req = $db->prepare("
-        UPDATE miel SET 
-        miel = :miel_modification, 
-        contenu = :contenu_modification,
-        prix = :prix_modification,
-        image_miel = :image_miel_modification
-        WHERE miel = :miel");
+
+		//miel = :miel".(strlen($miel_modification) > 0 ? '_modification' : '').",
+		// Si le chmaps $miel_modification > 0 alors miel = $miel_modification sinon miel = $miel
+		$req = $db->prepare("
+		UPDATE miel SET 
+		miel = :miel".(strlen($miel_modification) > 0 ? '_modification' : '').",
+		contenu = :contenu_modification,
+		prix = :prix_modification,
+		image_miel = :image_miel_modification
+		WHERE miel = :miel");
+
+
 
         $req->bindValue(':miel_modification', $miel_modification);
         $req->bindValue(':contenu_modification', $contenu_modification);
