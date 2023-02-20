@@ -105,5 +105,3 @@ if($_SESSION['administrateur'] !== 1)
 		</div>
 	</div>
 </div>
-
-test
