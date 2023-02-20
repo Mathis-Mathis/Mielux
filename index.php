@@ -21,6 +21,8 @@ if(isset($_GET['page']))
 <link rel="stylesheet" href="./css/ajout_miel.css">
 <link rel="stylesheet" href="./css/modification_miel.css">
 
+
+
 </head>
 
 <body <?php if ($page_afficher == "connexion" or $page_afficher == "ajout_miel" or $page_afficher == "modification_miel"){echo('class="body-yellow"');}?>>
@@ -58,8 +60,3 @@ if(isset($_GET['page']))
 </content>
 </body>
 </html>
-
-
-<?php 
-echo("test");
-?>

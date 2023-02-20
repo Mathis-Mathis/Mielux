@@ -9,7 +9,6 @@ if($_SESSION['administrateur'] !== 1)
 	if(isset(
 		$_POST['miel'], $_FILES['image_miel_modification']))
 	{
-
 		
 
 		$miel = $_POST['miel'];
@@ -106,3 +105,5 @@ if($_SESSION['administrateur'] !== 1)
 		</div>
 	</div>
 </div>
+
+test
