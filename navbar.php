@@ -6,7 +6,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php?page=index">Accueil</a>
+    <a class="navbar-brand" href="index.php?page=acceuil">Accueil</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,7 +16,7 @@ session_start();
           <a class="nav-link active" aria-current="page" href="index.php?page=miel">Nos miels</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Nos apiculteurs</a>
+          <a class="nav-link active" aria-current="page" href="index.php?page=apiculteurs">Nos apiculteurs</a>
         </li>
         <?php   
             if($_SESSION["administrateur"] == 1)

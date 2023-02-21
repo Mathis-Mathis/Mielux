@@ -52,9 +52,14 @@ if(isset($_GET['page']))
             include($page_afficher.".php");
             break;
 
+            case 'apiculteurs':
+                include($page_afficher.".php");
+                break;
+
         default:
             # code...
             break;
+
     }
     ?>
 </content>
